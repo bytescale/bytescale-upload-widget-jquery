@@ -91,8 +91,6 @@ Or via a `<script>` tag:
 
 ## Usage
 
-`@upload-io/jquery-uploader` provides two options:
-
 ### Step 1) Initialize the `uploader` plugin
 
 Call this once only — at the start of your app — before calling `$(x).uploader()`.
