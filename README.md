@@ -58,15 +58,17 @@
 
   // Displays the upload widget on all 'button' element clicks.
   // (You should narrow the selector down before using!)
-  $("button").uploader({
-    onComplete: files => {
-      if (files.length === 0) {
-        console.log('No files selected.')
-      } else {
-        console.log('Files uploaded:');
-        console.log(files.map(f => f.fileUrl));
+  $(() => {
+    $("button").uploader({
+      onComplete: files => {
+        if (files.length === 0) {
+          console.log('No files selected.')
+        } else {
+          console.log('Files uploaded:');
+          console.log(files.map(f => f.fileUrl));
+        }
       }
-    }
+    });
   });
 </script>
 ```
@@ -110,34 +112,38 @@ $.uploader.init({
 To display a **file upload dialog** on click:
 
 ```javascript
-$("button").uploader({
-  onComplete: files => {
-    if (files.length === 0) {
-      console.log('No files selected.')
-    } else {
-      console.log('Files uploaded:');
-      console.log(files.map(f => f.fileUrl));
+$(() => {
+  $("button").uploader({
+    onComplete: files => {
+      if (files.length === 0) {
+        console.log('No files selected.')
+      } else {
+        console.log('Files uploaded:');
+        console.log(files.map(f => f.fileUrl));
+      }
     }
-  }
+  });
 });
 ```
 
 To display a **file upload dropzone** inline on the page:
 
 ```javascript
-$("div").uploader({
-  dropzone: {
-    width: "600px",
-    height: "375px"
-  },
-  onUpdate: files => {
-    if (files.length === 0) {
-      console.log('No files selected.')
-    } else {
-      console.log('Files uploaded:');
-      console.log(files.map(f => f.fileUrl));
+$(() => {
+  $("div").uploader({
+    dropzone: {
+      width: "600px",
+      height: "375px"
+    },
+    onUpdate: files => {
+      if (files.length === 0) {
+        console.log('No files selected.')
+      } else {
+        console.log('Files uploaded:');
+        console.log(files.map(f => f.fileUrl));
+      }
     }
-  }
+  });
 });
 ```
 
