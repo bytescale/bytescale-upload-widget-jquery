@@ -4,27 +4,28 @@
   </a>
 </h1>
 
-<p align="center"><b>jQuery File Upload Component for <a href="https://upload.io/">Upload.io</a></b><br/> (jQuery Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>jQuery File Upload Plugin</b><br/> (jQuery Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+
 <br/>
 <p align="center">
   <a href="https://github.com/upload-io/jquery-uploader/">
     <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
   </a>
 
-  <a href="https://www.npmjs.com/package/jquery-uploader">
-    <img src="https://img.shields.io/badge/jquery--uploader-npm-4ba0f6" />
+  <a href="https://www.npmjs.com/package/@upload-io/jquery-uploader">
+    <img src="https://img.shields.io/badge/@upload--io/jquery--uploader-npm-4ba0f6" />
   </a>
 
   <a href="https://github.com/upload-io/jquery-uploader/actions/workflows/ci.yml">
     <img src="https://img.shields.io/badge/build-passing-4ba0f6" />
   </a>
 
-  <a href="https://www.npmjs.com/package/jquery-uploader">
+  <a href="https://www.npmjs.com/package/@upload-io/jquery-uploader">
     <img src="https://img.shields.io/npm/dt/jquery-uploader?color=%234ba0f6" />
   </a>
   <br/>
 
-  <a href="https://www.npmjs.com/package/jquery-uploader">
+  <a href="https://www.npmjs.com/package/@upload-io/jquery-uploader">
     <img src="https://img.shields.io/badge/TypeScript-included-4ba0f6" />
   </a>
 
@@ -44,28 +45,30 @@
 
 <p align="center">To create a file upload button:</p>
 
-```shell
-npm install @upload-io/jquery-uploader
-```
+```html
+<!-- Install jQuery & jQuery Uploader -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://js.upload.io/jquery-uploader/v1"></script>
 
-```javascript
-// Call once at the start of your app.
-$.uploader.init({
-  apiKey: "free"
-});
+<script>
+  // Call once at the start of your app.
+  $.uploader.init({
+    apiKey: "free"
+  });
 
-// Displays the upload widget on all 'button' element clicks.
-// (You should narrow the selector down before using!)
-$("button").uploader({
-  onComplete: files => {
-    if (files.length === 0) {
-      console.log('No files selected.')
-    } else {
-      console.log('Files uploaded:');
-      console.log(files.map(f => f.fileUrl));
+  // Displays the upload widget on all 'button' element clicks.
+  // (You should narrow the selector down before using!)
+  $("button").uploader({
+    onComplete: files => {
+      if (files.length === 0) {
+        console.log('No files selected.')
+      } else {
+        console.log('Files uploaded:');
+        console.log(files.map(f => f.fileUrl));
+      }
     }
-  }
-});
+  });
+</script>
 ```
 
 # Installation
