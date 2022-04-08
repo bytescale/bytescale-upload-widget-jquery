@@ -2,7 +2,7 @@
   "name": "@upload-io/jquery-uploader",
   "version": "1.1.1",
   "author": "Upload <hello@upload.io> (https://upload.io)",
-  "description": "jQuery Uploader | jQuery File Upload Component | Powered by Upload.io 🚀",
+  "description": "jQuery Uploader | jQuery File Upload Plugin | Powered by Upload.io 🚀",
   "license": "MIT",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",

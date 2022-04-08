@@ -46,7 +46,7 @@
 <p align="center">To create a file upload button:</p>
 
 ```html
-<!-- Install jQuery & Uploader -->
+<!-- Install jQuery & jQuery Uploader Plugin -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://js.upload.io/jquery-uploader/v1"></script>
 
