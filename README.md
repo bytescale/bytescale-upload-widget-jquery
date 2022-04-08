@@ -40,13 +40,13 @@
 </p>
 
 <h1 align="center">
-  Quick Start — <a href="https://codepen.io/upload-js/pen/yLpvYew?editors=1010">Try on CodePen</a>
+  Quick Start — <a href="https://codepen.io/upload-js/pen/ZEvoJaG?editors=1010">Try on CodePen</a>
 </h1>
 
 <p align="center">To create a file upload button:</p>
 
 ```html
-<!-- Install jQuery & jQuery Uploader -->
+<!-- Install jQuery & Uploader -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://js.upload.io/jquery-uploader/v1"></script>
 
