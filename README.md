@@ -183,7 +183,6 @@ All callbacks receive an `Array<UploaderResult>`:
 }
 ```
 
-
 ## Full Documentation
 
 jQuery Uploader is a wrapper for Uploader — see the **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)** 📖
