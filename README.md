@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="jQuery Uploader" width="267" height="106" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/logo.svg">
+    <img alt="jQuery Uploader" width="267" height="100" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
 
@@ -183,11 +183,26 @@ All callbacks receive an `Array<UploaderResult>`:
 }
 ```
 
+
 ## Full Documentation
 
-`@upload-io/jquery-uploader` is a jQuery wrapper for `uploader`.
+jQuery Uploader is a wrapper for Uploader — see the **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)** 📖
 
-Please see: **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)**.
+## Where are my files stored?
+
+Uploader uses [Upload.io](https://upload.io) as a storage and file hosting backend.
+
+Upload.io benefits developers with:
+
+- Zero Setup (Start uploading in the next few minutes!)
+- Pre-Integrated Storage (All you need is an Upload API key)
+- Fast File Hosting (Worldwide CDN, 300 Nodes)
+- Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
+- File Transformations (Image Resizing, Cropping, Optimization, etc)
+
+### Can I bring my own file storage?
+
+Uploader's USP is to provide developers with the least amount of work possible, while remaining customizable. As such, Uploader will always be closely integrated with the Upload.io platform, and there are currently no plans to support custom backends. You may, however, sync files from your Upload.io account to a custom storage target.
 
 ## Contribute
 
