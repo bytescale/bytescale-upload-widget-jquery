@@ -40,7 +40,8 @@
     "multi",
     "multipart",
     "ajax",
-    "xhr"
+    "xhr",
+    "plugin"
   ],
   "scripts": {
     "clean": "rm -rf dist",
