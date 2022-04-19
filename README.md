@@ -1,12 +1,13 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="Uploader" width="276" height="80" src="https://raw.githubusercontent.com/upload-io/assets/master/logo-uploader.svg">
+    <img alt="jQuery Uploader" width="267" height="106" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
 
-<p align="center"><b>jQuery File Upload Plugin</b><br/> (jQuery Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>jQuery File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 
-<br/>
+<p align="center">jQuery Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Developed by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
+
 <p align="center">
   <a href="https://github.com/upload-io/jquery-uploader/">
     <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
@@ -21,7 +22,7 @@
   </a>
 
   <a href="https://www.npmjs.com/package/@upload-io/jquery-uploader">
-    <img src="https://img.shields.io/npm/dt/jquery-uploader?color=%234ba0f6" />
+    <img src="https://img.shields.io/npm/dt/@upload-io/jquery-uploader?color=%234ba0f6" />
   </a>
   <br/>
 
@@ -30,7 +31,7 @@
   </a>
 
   <a href="https://github.com/upload-io/jquery-uploader/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/npms-io/maintenance-score/jquery-uploader?color=4ba0f6" />
+    <img src="https://img.shields.io/npms-io/maintenance-score/@upload-io/jquery-uploader?color=4ba0f6" />
   </a>
 
   <a target="_blank" href="https://twitter.com/intent/tweet?text=I%20just%20found%20Uploader%20%26%20Upload.io%20%E2%80%94%20they%20make%20it%20super%20easy%20to%20upload%20files%20%E2%80%94%20installs%20with%207%20lines%20of%20code%20https%3A%2F%2Fgithub.com%2Fupload-io%2Fuploader&hashtags=javascript,opensource,js,webdev,developers&via=UploadJS">
@@ -40,10 +41,15 @@
 </p>
 
 <h1 align="center">
-  Quick Start — <a href="https://codepen.io/upload-js/pen/ZEvoJaG?editors=1010">Try on CodePen</a>
+  Quick Start —
+  <a href="https://codepen.io/upload-js/pen/ZEvoJaG?editors=1010">
+    Try on CodePen
+  </a>
 </h1>
 
-<p align="center">To create a file upload button:</p>
+<p align="center"><a href="https://upload.io/uploader"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/demo.webp"></a></p>
+
+<p align="center">To implement the above widget:</p>
 
 ```html
 <!-- Install jQuery & jQuery Uploader Plugin -->
