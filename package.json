@@ -1,6 +1,6 @@
 {
   "name": "@upload-io/jquery-uploader",
-  "version": "1.4.7",
+  "version": "2.0.0",
   "author": "Upload <hello@upload.io> (https://upload.io)",
   "description": "jQuery File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
@@ -74,7 +74,7 @@
     "jquery": "3.6.0"
   },
   "dependencies": {
-    "uploader": "^1.48.0"
+    "uploader": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
@@ -90,7 +90,7 @@
     "@wdio/spec-reporter": "^7.19.1",
     "babel-loader": "8.2.3",
     "babel-plugin-transform-async-to-promises": "0.8.15",
-    "chromedriver": "^103.0.0",
+    "chromedriver": "^105.0.1",
     "enzyme": "3.11.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "6.15.0",

@@ -1,20 +1,20 @@
-import { Uploader, UploaderResult, UploaderOptions } from "uploader";
-import { Upload, UploadConfig } from "upload-js";
+import { Uploader, UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
+import { UploadInterface, UploadConfig } from "upload-js";
 import { JQueryUploaderOptions } from "@upload-io/jquery-uploader/JQueryUploaderOptions";
 import { JQueryUploaderDropzoneOptions } from "@upload-io/jquery-uploader/JQueryUploaderDropzoneOptions";
 
 (function ($) {
-  let uploader: Uploader | undefined;
+  let uploader: UploaderInterface | undefined;
 
   $.extend({
     uploader: {
-      init(uploadOrConfig: UploadConfig | Upload) {
-        uploader = new Uploader(uploadOrConfig);
+      init(uploadOrConfig: UploadConfig | UploadInterface) {
+        uploader = Uploader(uploadOrConfig);
       }
     }
   });
 
-  const useUploader = (callback: (uploader: Uploader) => void): void => {
+  const useUploader = (callback: (uploader: UploaderInterface) => void): void => {
     if (uploader === undefined) {
       console.error("[jquery-uploader] Initialization required, e.g. $.uploader.init({apiKey: 'free'})");
     } else {
