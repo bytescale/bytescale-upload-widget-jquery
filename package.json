@@ -74,7 +74,7 @@
     "jquery": "3.6.0"
   },
   "dependencies": {
-    "uploader": "^2.1.0"
+    "uploader": "^2.5.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
@@ -90,7 +90,7 @@
     "@wdio/spec-reporter": "^7.19.1",
     "babel-loader": "8.2.3",
     "babel-plugin-transform-async-to-promises": "0.8.15",
-    "chromedriver": "^105.0.1",
+    "chromedriver": "^107.0.3",
     "enzyme": "3.11.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "6.15.0",
@@ -111,7 +111,7 @@
     "ts-loader": "8.0.11",
     "ts-node": "^10.7.0",
     "tsc-alias": "1.2.10",
-    "typescript": "4.1.2",
+    "typescript": "4.6.2",
     "wdio-chromedriver-service": "^7.3.2",
     "wdio-wait-for": "^2.2.5",
     "webdriverio": "^7.19.3",

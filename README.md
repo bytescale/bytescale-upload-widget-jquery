@@ -54,7 +54,7 @@
 ```html
 <!-- Install jQuery & jQuery Uploader Plugin -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://js.upload.io/jquery-uploader/v1"></script>
+<script src="https://js.upload.io/jquery-uploader/v2"></script>
 
 <script>
   // Call once at the start of your app.
@@ -97,7 +97,7 @@ Or via a `<script>` tag:
 
 ```html
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://js.upload.io/jquery-uploader/v1"></script>
+<script src="https://js.upload.io/jquery-uploader/v2"></script>
 ```
 
 ## Usage
@@ -160,6 +160,7 @@ All callbacks receive an `Array<UploaderResult>`:
 ```javascript
 {
   fileUrl: "https://upcdn.io/FW25...",   // URL to use when serving this file.
+  filePath: "/uploads/example.jpg",      // File path (we recommend saving this to your database).
 
   editedFile: undefined,                 // Edited file (for image crops). Same structure as below.
 
