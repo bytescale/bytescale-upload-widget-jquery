@@ -47,6 +47,7 @@ import { JQueryUploaderDropzoneOptions } from "@upload-io/jquery-uploader/JQuery
       $(this).css({
         position: "relative",
         width: "100%",
+        minWidth: "280px",
         maxWidth: dropzone?.width ?? "600px",
         height: dropzone?.height ?? "375px"
       });
