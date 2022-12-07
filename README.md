@@ -54,7 +54,7 @@
 ```html
 <!-- Install jQuery & jQuery Uploader Plugin -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://js.upload.io/jquery-uploader/v2"></script>
+<script src="https://js.upload.io/jquery-uploader/v3"></script>
 
 <script>
   // Call once at the start of your app.
@@ -97,7 +97,7 @@ Or via a `<script>` tag:
 
 ```html
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://js.upload.io/jquery-uploader/v2"></script>
+<script src="https://js.upload.io/jquery-uploader/v3"></script>
 ```
 
 ## Usage
