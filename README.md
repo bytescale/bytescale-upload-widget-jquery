@@ -155,7 +155,7 @@ $(() => {
 
 ## The Result
 
-All callbacks receive an `Array<UploaderResult>`:
+All callbacks receive an `Array<UploadWidgetResult>`:
 
 ```javascript
 {

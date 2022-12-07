@@ -1,4 +1,4 @@
-import { Uploader, UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
+import { Uploader, UploaderInterface, UploadWidgetResult, UploadWidgetConfig } from "uploader";
 import { UploadInterface, UploadConfig } from "upload-js";
 import { JQueryUploaderOptions } from "@upload-io/jquery-uploader/JQueryUploaderOptions";
 import { JQueryUploaderDropzoneOptions } from "@upload-io/jquery-uploader/JQueryUploaderDropzoneOptions";
@@ -23,8 +23,8 @@ import { JQueryUploaderDropzoneOptions } from "@upload-io/jquery-uploader/JQuery
   };
 
   const funcs: any = $.fn;
-  funcs.uploader = function (optionsMaybe?: UploaderOptions & JQueryUploaderOptions) {
-    const handleOnComplete = (promise: Promise<UploaderResult[]>): void => {
+  funcs.uploader = function (optionsMaybe?: UploadWidgetConfig & JQueryUploaderOptions) {
+    const handleOnComplete = (promise: Promise<UploadWidgetResult[]>): void => {
       promise.then(
         files => {
           const onComplete = optionsMaybe?.onComplete;

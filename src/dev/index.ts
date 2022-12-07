@@ -1,4 +1,4 @@
-import { UploaderResult } from "uploader";
+import { UploadWidgetResult } from "uploader";
 import "@upload-io/jquery-uploader";
 
 ($ as any).uploader.init({
@@ -6,7 +6,7 @@ import "@upload-io/jquery-uploader";
 });
 
 ($("button") as any).uploader({
-  onComplete: (files: UploaderResult[]) => {
+  onComplete: (files: UploadWidgetResult[]) => {
     if (files.length === 0) {
       console.log("No files selected.");
     } else {
@@ -21,7 +21,7 @@ import "@upload-io/jquery-uploader";
     width: "600px",
     height: "375px"
   },
-  onUpdate: (files: UploaderResult[]) => {
+  onUpdate: (files: UploadWidgetResult[]) => {
     if (files.length === 0) {
       console.log("No files selected in dropzone.");
     } else {
