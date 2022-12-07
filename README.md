@@ -1,13 +1,10 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="jQuery Uploader" width="267" height="100" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/logo.svg">
+    <img alt="jQuery Uploader" width="264" height="106" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
-
 <p align="center"><b>jQuery File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
-
-<p align="center">jQuery Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Developed by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
-
+<br/>
 <p align="center">
   <a href="https://github.com/upload-io/jquery-uploader/">
     <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
@@ -39,45 +36,28 @@
   </a>
 
 </p>
-
 <h1 align="center">
-  Quick Start —
-  <a href="https://codepen.io/upload-js/pen/ZEvoJaG?editors=1010">
+  Get Started —
+  <a href="https://codepen.io/upload-js/pen/ZEvoJaG?editors=1000">
     Try on CodePen
   </a>
 </h1>
 
 <p align="center"><a href="https://upload.io/uploader"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/upload-io/jquery-uploader/main/.github/assets/demo.webp"></a></p>
 
-<p align="center">To implement the above widget:</p>
+<p align="center">100% Serverless File Upload Widget  <br /> Powered by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
 
-```html
-<!-- Install jQuery & jQuery Uploader Plugin -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://js.upload.io/jquery-uploader/v3"></script>
+<hr/>
 
-<script>
-  // Call once at the start of your app.
-  $.uploader.init({
-    apiKey: "free"
-  });
+<p align="center"><a href="https://upload.io/dmca" rel="nofollow">DMCA Compliant</a> • <a href="https://upload.io/dpa" rel="nofollow">GDPR Compliant</a> • <a href="https://upload.io/sla" rel="nofollow">99.9% Uptime SLA</a>
+  <br/>
+  <b>Supports:</b> Rate Limiting, Volume Limiting, File Size &amp; Type Limiting, JWT Auth, and more...
+  <br />
+</p>
 
-  // Displays the upload widget on all 'button' element clicks.
-  // (You should narrow the selector down before using!)
-  $(() => {
-    $("button").uploader({
-      onComplete: files => {
-        if (files.length === 0) {
-          console.log('No files selected.')
-        } else {
-          console.log('Files uploaded:');
-          console.log(files.map(f => f.fileUrl));
-        }
-      }
-    });
-  });
-</script>
-```
+<hr/>
+<br />
+<br />
 
 # Installation
 
@@ -115,7 +95,7 @@ $.uploader.init({
 
 ### Step 2) Display the Upload Widget
 
-To display a **file upload dialog** on click:
+To display a **file upload dialog** on click — [Try on CodePen](https://codepen.io/upload-js/pen/ZEvoJaG?editors=1000)
 
 ```javascript
 $(() => {
@@ -132,7 +112,7 @@ $(() => {
 });
 ```
 
-To display a **file upload dropzone** inline on the page:
+To display a **file upload dropzone** inline on the page  — [Try on CodePen](https://codepen.io/upload-js/pen/ExRrgRx?editors=1000)
 
 ```javascript
 $(() => {
