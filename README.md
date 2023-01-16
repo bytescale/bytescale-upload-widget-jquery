@@ -112,7 +112,7 @@ $(() => {
 });
 ```
 
-To display a **file upload dropzone** inline on the page  — [Try on CodePen](https://codepen.io/upload-js/pen/ExRrgRx?editors=1000)
+To display a **file upload dropzone** inline on the page — [Try on CodePen](https://codepen.io/upload-js/pen/ExRrgRx?editors=1000)
 
 ```javascript
 $(() => {
