@@ -75,14 +75,14 @@
     "jquery": "3.6.0"
   },
   "dependencies": {
-    "uploader": "^3.11.0"
+    "uploader": "^3.12.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
     "@babel/core": "7.17.8",
     "@babel/preset-env": "7.16.11",
-    "@types/jquery": "3.5.14",
     "@types/jest": "27.4.1",
+    "@types/jquery": "3.5.14",
     "@typescript-eslint/eslint-plugin": "4.8.1",
     "@typescript-eslint/parser": "4.8.1",
     "@wdio/cli": "^7.19.3",
