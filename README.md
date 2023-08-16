@@ -38,7 +38,7 @@
 </p>
 <h1 align="center">
   Get Started —
-  <a href="https://codepen.io/upload-js/pen/ZEvoJaG?editors=1000">
+  <a href="https://codepen.io/bytescale/pen/ZEvoJaG?editors=1000">
     Try on CodePen
   </a>
 </h1>
@@ -95,7 +95,7 @@ $.uploader.init({
 
 ### Step 2) Display the Upload Widget
 
-To display a **file upload dialog** on click — [Try on CodePen](https://codepen.io/upload-js/pen/ZEvoJaG?editors=1000)
+To display a **file upload dialog** on click — [Try on CodePen](https://codepen.io/bytescale/pen/ZEvoJaG?editors=1000)
 
 ```javascript
 $(() => {
@@ -112,7 +112,7 @@ $(() => {
 });
 ```
 
-To display a **file upload dropzone** inline on the page — [Try on CodePen](https://codepen.io/upload-js/pen/ExRrgRx?editors=1000)
+To display a **file upload dropzone** inline on the page — [Try on CodePen](https://codepen.io/bytescale/pen/ExRrgRx?editors=1000)
 
 ```javascript
 $(() => {
