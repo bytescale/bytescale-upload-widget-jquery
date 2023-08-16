@@ -8,7 +8,7 @@ if (isNaN(majorVersion)) {
 }
 
 /**
- * Creates the dist that's published to 'https://js.upload.io/jquery-uploader/v*'.
+ * Creates the dist that's published to 'https://js.bytescale.com/jquery-uploader/v*'.
  */
 module.exports = {
   ...config,
