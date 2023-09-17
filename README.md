@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://www.bytescale.com/docs/upload-widget/jquery">
-    <img alt="Bytescale Upload Widget for jQuery" width="663" height="67" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-jquery/main/.github/assets/bytescale-upload-widget-jquery.svg">
+    <img alt="Bytescale Upload Widget for jQuery" width="549" height="80" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-jquery/main/.github/assets/bytescale-upload-widget-jquery.svg">
   </a>
 </h1>
 <p align="center"><b>Beautiful File Upload Widget for jQuery</b><br/> (With Built-in Cloud Storage)</p>
@@ -59,7 +59,6 @@
 
 <hr/>
 
-<br />
 <br />
 
 ## Installation
