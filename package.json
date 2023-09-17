@@ -1,19 +1,19 @@
 {
-  "name": "@upload-io/jquery-uploader",
-  "version": "3.38.0",
+  "name": "@bytescale/upload-widget-jquery",
+  "version": "4.0.0",
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "jQuery File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://www.bytescale.com/docs/upload-widget/frameworks/jquery",
+  "homepage": "https://www.bytescale.com/docs/upload-widget/jquery",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bytescale/jquery-uploader.git"
+    "url": "git+https://github.com/bytescale/bytescale-upload-widget-jquery.git"
   },
   "bugs": {
-    "url": "https://github.com/bytescale/jquery-uploader/issues"
+    "url": "https://github.com/bytescale/bytescale-upload-widget-jquery/issues"
   },
   "files": [
     "/dist/**/*",
@@ -53,7 +53,7 @@
     "publish:executeIfReleaseCommit": "bash -c 'COMMIT=$(git log -1 --pretty=%B) && [ \"${COMMIT:0:8}\" != \"Release \" ] || npm run publish:execute'",
     "publish:execute": "npm run publish:cdn && npm publish && npm run publish:createGitHubRelease",
     "publish:createGitHubRelease": "gh release create v$(node -p \"require('./package.json').version\")",
-    "publish:cdn": "npm run prepack:cdn && aws s3 cp --recursive --content-type application/javascript dist/ s3://upload-js-releases/jquery-uploader/ && aws cloudfront create-invalidation --distribution-id EO4VJPLCDN8HY --paths '/jquery-uploader/*' && aws cloudfront create-invalidation --distribution-id E250290WAJ43YY --paths '/jquery-uploader/*'",
+    "publish:cdn": "npm run prepack:cdn && aws s3 cp --recursive --content-type application/javascript dist/ s3://upload-js-releases/upload-widget-jquery/ && aws cloudfront create-invalidation --distribution-id E250290WAJ43YY --paths '/upload-widget-jquery/*'",
     "test": "npx wdio run tests/wdio.conf.ts --autoCompileOpts.tsNodeOpts.project=tests/tsconfig.json",
     "prepare": "husky install"
   },
@@ -68,14 +68,14 @@
       "bash -c \"tsc --noEmit\""
     ],
     "*.{js,jsx,ts,tsx,json,css,html,md,yaml,yml}": [
-      "prettier -c"
+      "prettier -w"
     ]
   },
   "peerDependencies": {
     "jquery": "3.6.0"
   },
   "dependencies": {
-    "uploader": "^3.47.0"
+    "@bytescale/upload-widget": "^4.3.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",

@@ -27,7 +27,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
     alias: {
       // Remember to keep in sync with `tsconfig.json`
-      "@upload-io/jquery-uploader": path.resolve(__dirname, "src")
+      "@bytescale/upload-widget-jquery": path.resolve(__dirname, "src")
     }
   },
   externals: nodeExternals(),

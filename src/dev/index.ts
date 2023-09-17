@@ -1,11 +1,8 @@
-import { UploadWidgetResult } from "uploader";
-import "@upload-io/jquery-uploader";
+import "@bytescale/upload-widget-jquery";
+import { UploadWidgetResult } from "@bytescale/upload-widget";
 
-($ as any).uploader.init({
-  apiKey: "free"
-});
-
-($("button") as any).uploader({
+($("button") as any).bytescaleUploadWidget({
+  apiKey: "free",
   onComplete: (files: UploadWidgetResult[]) => {
     if (files.length === 0) {
       console.log("No files selected.");
@@ -16,7 +13,8 @@ import "@upload-io/jquery-uploader";
   }
 });
 
-($("#dropzone") as any).uploader({
+($("#dropzone") as any).bytescaleUploadWidget({
+  apiKey: "free",
   dropzone: {
     width: "600px",
     height: "375px"

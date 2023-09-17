@@ -18,8 +18,8 @@
     "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
-      "@upload-io/jquery-uploader": ["./"],
-      "@upload-io/jquery-uploader/*": ["./*"]
+      "@bytescale/upload-widget-jquery": ["./"],
+      "@bytescale/upload-widget-jquery/*": ["./*"]
     }
   },
   "include": ["./src/**/*"],

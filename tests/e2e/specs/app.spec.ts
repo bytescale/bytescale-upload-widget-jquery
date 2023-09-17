@@ -1,6 +1,6 @@
 import App from "../pageobjects/app.page";
 
-describe("jquery-uploader sandbox", () => {
+describe("@bytescale/upload-widget-jquery sandbox", () => {
   it("should contain a dropzone component", async () => {
     await App.open();
     await expect(App.dropzoneUploadButton).toHaveText("Upload a File");
