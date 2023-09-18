@@ -1,5 +1,5 @@
 import "@bytescale/upload-widget-jquery";
-import { UploadWidgetResult } from "@bytescale/upload-widget";
+import { UploadWidgetResult, UploadWidgetOnUpdateEvent } from "@bytescale/upload-widget";
 
 ($("button") as any).bytescaleUploadWidget({
   apiKey: "free",
@@ -19,12 +19,12 @@ import { UploadWidgetResult } from "@bytescale/upload-widget";
     width: "600px",
     height: "375px"
   },
-  onUpdate: (files: UploadWidgetResult[]) => {
-    if (files.length === 0) {
+  onUpdate: ({ uploadedFiles }: UploadWidgetOnUpdateEvent) => {
+    if (uploadedFiles.length === 0) {
       console.log("No files selected in dropzone.");
     } else {
       console.log("Files uploaded in dropzone:");
-      console.log(files.map(f => f.fileUrl));
+      console.log(uploadedFiles.map(f => f.fileUrl));
     }
   }
 });
