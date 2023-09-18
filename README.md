@@ -116,16 +116,21 @@ $(() => {
     // Full Configuration:
     // https://www.bytescale.com/docs/upload-widget#configuration
     apiKey: "free", // Get API keys from: www.bytescale.com
+    maxFileCount: 10,
+    showFinishButton: true,
     dropzone: {
       width: "600px",
       height: "375px"
     },
-    onUpdate: ({ uploadedFiles }) => {
-      if (uploadedFiles.length === 0) {
-        console.log('No files selected.')
+    onUpdate: event => {
+      console.log("On update:");
+      console.log(JSON.stringify(event));
+    },
+    onComplete: files => {
+      if (files.length === 0) {
+        alert('No files selected.')
       } else {
-        console.log('Files uploaded:');
-        console.log(uploadedFiles.map(f => f.fileUrl));
+        alert(files.map(f => f.fileUrl).join("\n"));
       }
     }
   });
