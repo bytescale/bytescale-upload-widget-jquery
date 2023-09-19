@@ -1,19 +1,19 @@
 {
   "name": "@upload-io/jquery-uploader",
-  "version": "3.38.0",
+  "version": "3.38.1",
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "jQuery File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://www.bytescale.com/docs/upload-widget/frameworks/jquery",
+  "homepage": "https://www.bytescale.com/docs/upload-widget/jquery",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bytescale/jquery-uploader.git"
+    "url": "git+https://github.com/bytescale/bytescale-upload-widget-jquery.git"
   },
   "bugs": {
-    "url": "https://github.com/bytescale/jquery-uploader/issues"
+    "url": "https://github.com/bytescale/bytescale-upload-widget-jquery/issues"
   },
   "files": [
     "/dist/**/*",

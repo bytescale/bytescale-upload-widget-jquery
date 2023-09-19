@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://www.bytescale.com/docs/upload-widget/frameworks/jquery">
-    <img alt="jQuery Uploader" width="264" height="106" src="https://raw.githubusercontent.com/bytescale/jquery-uploader/main/.github/assets/logo.svg">
-  </a>
+  Migrated to: <a href="https://www.npmjs.com/package/@bytescale/upload-widget-jquery">@bytescale/upload-widget-jquery</a>
 </h1>
 <p align="center"><b>jQuery File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 <br/>
