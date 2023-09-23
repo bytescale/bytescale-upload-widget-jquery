@@ -122,9 +122,9 @@ $(() => {
       width: "600px",
       height: "375px"
     },
-    onUpdate: event => {
-      console.log("On update:");
-      console.log(JSON.stringify(event));
+    onUpdate: ({ uploadedFiles, pendingFiles }) => {
+      const uploadedFileUrls = uploadedFiles.map(x => x.fileUrl).join("\n");
+      console.log(uploadedFileUrls);
     },
     onComplete: files => {
       if (files.length === 0) {
