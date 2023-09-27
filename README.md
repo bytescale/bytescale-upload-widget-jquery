@@ -122,7 +122,7 @@ $(() => {
       width: "600px",
       height: "375px"
     },
-    onUpdate: ({ uploadedFiles, pendingFiles }) => {
+    onUpdate: ({ uploadedFiles, pendingFiles, failedFiles }) => {
       const uploadedFileUrls = uploadedFiles.map(x => x.fileUrl).join("\n");
       console.log(uploadedFileUrls);
     },
@@ -198,6 +198,7 @@ const options = {
   }) => {},                       // object to the method's first parameter.
   onUpdate: (event) => {          // Called each time the Upload Widget's list of files change.
     // event.pendingFiles         // Array of files that are either uploading or queued.
+    // event.failedFiles          // Array of files that failed to upload (due to network or validation reasons).
     // event.uploadedFiles        // Array of files that have been uploaded and not removed.
   },
   onPreUpload: async file => ({
