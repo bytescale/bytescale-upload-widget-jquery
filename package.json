@@ -75,7 +75,7 @@
     "jquery": "3.6.0"
   },
   "dependencies": {
-    "@bytescale/upload-widget": "^4.20.0"
+    "@bytescale/upload-widget": "^4.21.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
