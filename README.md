@@ -3,7 +3,7 @@
     <img alt="Bytescale Upload Widget for jQuery" width="549" height="80" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-jquery/main/.github/assets/bytescale-upload-widget-jquery.svg">
   </a>
 </h1>
-<p align="center"><b>Beautiful File Upload Widget for jQuery</b><br/> (With Built-in Cloud Storage)</p>
+<p align="center"><b>Beautiful File Upload Widget for jQuery</b><br/> (Works out-the-box, storage included)</p>
 <br/>
 <p align="center">
   <a href="https://www.npmjs.com/package/@bytescale/upload-widget-jquery">
@@ -489,6 +489,23 @@ UrlBuilder.url({
 ```
 
 [Archive Processing API Docs »](https://www.bytescale.com/docs/archive-processing-api)
+
+#### Antivirus
+
+To scan the file `example.zip` for viruses, use the following:
+
+```javascript
+// Returns: "https://upcdn.io/1234abc/antivirus/example.zip"
+UrlBuilder.url({
+  accountId: "1234abc",
+  filePath: "/example.zip",
+  options: {
+    transformation: "antivirus"
+  }
+});
+```
+
+[Antivirus API Docs »](https://www.bytescale.com/docs/antivirus-api)
 
 ## 🙋 Can I use my own storage?
 
