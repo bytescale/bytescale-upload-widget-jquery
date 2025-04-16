@@ -31,7 +31,7 @@ import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale
 
       $(this)
         .get()
-        .forEach(element => {
+        .forEach((element: HTMLElement) => {
           handleOnComplete(
             UploadWidget.open({
               ...options,

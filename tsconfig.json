@@ -20,8 +20,9 @@
     "paths": {
       "@bytescale/upload-widget-jquery": ["./"],
       "@bytescale/upload-widget-jquery/*": ["./*"]
-    }
+    },
+    "types": ["@wdio/globals/types", "@wdio/mocha-framework", "jquery"]
   },
-  "include": ["./src/**/*"],
+  "include": ["./**/*"],
   "exclude": ["./node_modules/**/*"]
 }
