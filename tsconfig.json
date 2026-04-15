@@ -21,7 +21,7 @@
       "@bytescale/upload-widget-jquery": ["./"],
       "@bytescale/upload-widget-jquery/*": ["./*"]
     },
-    "types": ["@wdio/globals/types", "@wdio/mocha-framework", "jquery"]
+    "types": ["@wdio/globals/types", "@wdio/jasmine-framework", "jasmine", "jquery"]
   },
   "include": ["./**/*"],
   "exclude": ["./node_modules/**/*"]

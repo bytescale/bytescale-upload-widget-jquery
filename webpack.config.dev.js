@@ -15,7 +15,7 @@ module.exports = {
   externals: [],
   cache: true,
   mode: "development",
-  entry: [`webpack-dev-server/client?http://localhost:${port}/`, "./src/dev/index.ts"],
+  entry: "./src/dev/index.ts",
   plugins: [
     ...baseConfig.plugins,
     new HtmlWebpackPlugin({
@@ -25,6 +25,7 @@ module.exports = {
     })
   ],
   devServer: {
+    host: "127.0.0.1",
     hot: true,
     open: true,
     port

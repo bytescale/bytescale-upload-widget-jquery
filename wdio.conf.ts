@@ -1,5 +1,59 @@
+declare const __dirname: string;
+declare const require: (id: string) => any;
+
+type DevServerProcess = {
+  exitCode: number | null;
+  kill: (signal?: string) => void;
+};
+
+const { spawn } = require("node:child_process") as {
+  spawn: (command: string, options: { cwd: string; shell: boolean; stdio: "inherit" }) => DevServerProcess;
+};
+
+const devServerUrl = "http://127.0.0.1:3050/";
+const devServerStartupTimeoutMs = 30000;
+const devServerPollIntervalMs = 500;
+
+let devServerProcess: DevServerProcess | undefined;
+let startedDevServer = false;
+
+const isDevServerReady = async (): Promise<boolean> => {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 1000);
+
+  try {
+    const response = await fetch(devServerUrl, {
+      signal: controller.signal
+    });
+    await response.arrayBuffer();
+    return response.ok;
+  } catch {
+    return false;
+  } finally {
+    clearTimeout(timeoutId);
+  }
+};
+
+const waitForDevServer = async (): Promise<void> => {
+  const startedAt = Date.now();
+
+  while (Date.now() - startedAt < devServerStartupTimeoutMs) {
+    if (await isDevServerReady()) {
+      return;
+    }
+
+    if (devServerProcess?.exitCode !== null && devServerProcess?.exitCode !== undefined) {
+      throw new Error(`Development server exited before it became ready (exit code ${devServerProcess.exitCode}).`);
+    }
+
+    await new Promise(resolve => setTimeout(resolve, devServerPollIntervalMs));
+  }
+
+  throw new Error(`Timed out waiting for development server at ${devServerUrl}.`);
+};
+
 export const config: WebdriverIO.Config = {
-  baseUrl: "http://localhost:3050",
+  baseUrl: "http://127.0.0.1:3050",
 
   //
   // ====================
@@ -115,7 +169,7 @@ export const config: WebdriverIO.Config = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: "mocha",
+  framework: "jasmine",
 
   //
   // The number of times to retry the entire specfile when it fails as a whole
@@ -132,12 +186,10 @@ export const config: WebdriverIO.Config = {
   // see also: https://webdriver.io/docs/dot-reporter
   reporters: ["spec"],
 
-  // Options to be passed to Mocha.
-  // See the full list at http://mochajs.org/
-  mochaOpts: {
-    ui: "bdd",
-    timeout: 60000
-  }
+  // Options to be passed to Jasmine.
+  jasmineOpts: {
+    defaultTimeoutInterval: 60000
+  },
 
   //
   // =====
@@ -152,8 +204,20 @@ export const config: WebdriverIO.Config = {
    * @param {object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
    */
-  // onPrepare: function (config, capabilities) {
-  // },
+  async onPrepare() {
+    if (await isDevServerReady()) {
+      return;
+    }
+
+    devServerProcess = spawn("npm run start -- --no-open", {
+      cwd: __dirname,
+      shell: true,
+      stdio: "inherit"
+    });
+    startedDevServer = true;
+
+    await waitForDevServer();
+  },
   /**
    * Gets executed before a worker process is spawned and can be used to initialize specific service
    * for that worker as well as modify runtime environments in an async fashion.
@@ -276,8 +340,15 @@ export const config: WebdriverIO.Config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
-  // },
+  async onComplete() {
+    if (!startedDevServer || devServerProcess === undefined || devServerProcess.exitCode !== null) {
+      return;
+    }
+
+    devServerProcess.kill("SIGTERM");
+    devServerProcess = undefined;
+    startedDevServer = false;
+  }
   /**
    * Gets executed when a refresh happens.
    * @param {string} oldSessionId session ID of the old session
